@@ -11,3 +11,4 @@ A simple Python calculator that performs addition, subtraction, multiplication, 
 ## Error handling
 The calculator handles invalid number inputs and division by zero.
 
+
