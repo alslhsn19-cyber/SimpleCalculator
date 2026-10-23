@@ -15,13 +15,14 @@ try:
     elif operator == "/":
         if num2 == 0:
             print("Error: Cannot divide by zero.")
+            result = None
         else:
             result = num1 / num2
-            print("Result:", result)
     else:
         print("Invalid operator.")
+        result = None
 
-    if operator in ["+", "-", "*"]:
+    if result is not None:
         print("Result:", result)
 
 except ValueError:
