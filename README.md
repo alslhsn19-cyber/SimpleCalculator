@@ -1,4 +1,4 @@
-# SimpleCalculator
+# SimpleCalculator - Main branch update
 
 ## What the project does
 A simple Python calculator that performs addition, subtraction, multiplication, and division.
