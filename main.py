@@ -1,29 +1,35 @@
 
 print("Welcome to Simple Calculator!")
 
-try:
-    num1 = float(input("Enter the first number: "))
-    operator = input("Enter an operator (+, -, *, /): ")
-    num2 = float(input("Enter the second number: "))
+while True:
+    try:
+        num1_input = input("Enter the first number (or 'q' to quit): ")
 
-    if operator == "+":
-        result = num1 + num2
-    elif operator == "-":
-        result = num1 - num2
-    elif operator == "*":
-        result = num1 * num2
-    elif operator == "/":
-        if num2 == 0:
-            print("Error: Cannot divide by zero.")
-            result = None
-        else:
+        if num1_input.lower() == "q":
+            print("Goodbye!")
+            break
+
+        num1 = float(num1_input)
+        operator = input("Enter an operator (+, -, *, /): ")
+        num2 = float(input("Enter the second number: "))
+
+        if operator == "+":
+            result = num1 + num2
+        elif operator == "-":
+            result = num1 - num2
+        elif operator == "*":
+            result = num1 * num2
+        elif operator == "/":
+            if num2 == 0:
+                print("Error: Cannot divide by zero.")
+                continue
             result = num1 / num2
-    else:
-        print("Invalid operator.")
-        result = None
+        else:
+            print("Invalid operator. Please try again.")
+            continue
 
-    if result is not None:
         print("Result:", result)
 
-except ValueError:
-    print("Error: Please enter valid numbers.")
+    except ValueError:
+        print("Error: Please enter valid numbers.")
+
